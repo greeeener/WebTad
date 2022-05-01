@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navi_menu"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_menu_24"
+        android:title="Menu"/>
+
+    <item
+        android:id="@+id/navi_find"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_find_in_page_24"
+        android:title="Find WT"/>
+
+    <item
+        android:id="@+id/navi_chat"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_chat_bubble_24"
+        android:title="Chatting"/>
+
+    <item
+        android:id="@+id/navi_page"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_person_24"
+        android:title="My Page"/>
+
+</menu>
