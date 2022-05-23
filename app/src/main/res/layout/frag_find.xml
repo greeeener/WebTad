@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
+    tools:context=".MainActivity"
     android:orientation="vertical">
 
     <LinearLayout
@@ -13,6 +13,19 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:text="전체웹툰"
+            android:textSize="20dp"
+            android:textColor="#F1E9FF"
+            android:backgroundTint="#503072"
+            android:fontFamily="@font/cafe24_air"/>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -24,10 +37,36 @@
                 android:layout_weight="1"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="5dp"
-                android:layout_marginTop="10dp"
                 android:layout_marginBottom="5dp"
-                android:text="\n\n\n네이버웹툰\n\n\n"
-                android:textSize="20dp"
+                android:text="네이버\n웹툰"
+                android:textSize="15dp"
+                android:textColor="#F1E9FF"
+                android:backgroundTint="#9384D5"
+                android:fontFamily="@font/cafe24_air"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
+                android:text="카카오\n웹툰"
+                android:textSize="15dp"
+                android:textColor="#D3CBF5"
+                android:backgroundTint="#787878"
+                android:fontFamily="@font/cafe24_air"/>
+
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
+                android:text="카카오\n페이지"
+                android:textSize="15dp"
                 android:textColor="#F1E9FF"
                 android:backgroundTint="#9384D5"
                 android:fontFamily="@font/cafe24_air"/>
@@ -38,53 +77,21 @@
                 android:layout_weight="1"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="10dp"
-                android:layout_marginTop="10dp"
                 android:layout_marginBottom="5dp"
-                android:text="\n\n\n카카오웹툰\n\n\n"
-                android:textSize="20dp"
+                android:text="레진\n코믹스"
+                android:textSize="15dp"
                 android:textColor="#D3CBF5"
                 android:backgroundTint="#787878"
                 android:fontFamily="@font/cafe24_air"/>
 
         </LinearLayout>
 
-        <LinearLayout
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recy_find"
+            android:layout_below="@id/title"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content"/>
 
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="5dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="10dp"
-                android:text="\n\n\n카카오페이지\n\n\n"
-                android:textSize="20dp"
-                android:textColor="#D3CBF5"
-                android:backgroundTint="#787878"
-                android:fontFamily="@font/cafe24_air"/>
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="10dp"
-                android:text="\n\n\n레진코믹스\n\n\n"
-                android:textSize="20dp"
-                android:textColor="#F1E9FF"
-                android:backgroundTint="#9384D5"
-                android:fontFamily="@font/cafe24_air"/>
-
-        </LinearLayout>
-
-</LinearLayout>
-
-
+    </LinearLayout>
 
 </LinearLayout>

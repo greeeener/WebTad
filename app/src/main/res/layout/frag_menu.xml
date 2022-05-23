@@ -21,63 +21,44 @@
             android:layout_weight="1"
             android:text = "  웹툰 고르기"
             android:textStyle = "bold"
-            android:textSize = "25dp"
+            android:textSize = "20dp"
             android:textColor = "#333661"
             android:fontFamily="@font/cafe24_air"
             android:background="#D3CBF5"/>
 
-        <TextView
-            android:layout_width="30dp"
-            android:layout_height="match_parent"/>
+        <ImageButton
+            android:id="@+id/muAddBtn"
+            android:layout_width="80sp"
+            android:layout_height="60sp"
+            android:layout_weight="0"
+            android:src="@drawable/ic_baseline_add_24"
+            android:scaleType="fitCenter"
+            android:backgroundTint="#F1E9FF" />
+
+
+        <ImageButton
+            android:id="@+id/muListBtn"
+            android:layout_width="80sp"
+            android:layout_height="60sp"
+            android:layout_weight="0"
+            android:src="@drawable/ic_baseline_format_list_bulleted_24"
+            android:scaleType="fitCenter"
+            android:backgroundTint="#F1E9FF"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp" />
 
     </LinearLayout>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recy_view"
-        android:layout_below="@id/title"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-
-
-    <ImageButton
-        android:layout_width="match_parent"
-        android:layout_height="80sp"
-        android:layout_below="@id/recy_view"
-        android:src="@drawable/ic_baseline_add_24"
-        android:scaleType="fitCenter"
-        android:backgroundTint="#F1E9FF"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginBottom="5dp" />
-
     <LinearLayout
-        android:id="@+id/select_btn"
-        android:layout_alignParentBottom="true"
+        android:id="@+id/child_fragment"
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
-        android:orientation="horizontal">
+        android:layout_height="match_parent"
+        android:layout_below="@id/title">
 
-        <TextView
-            android:layout_width="150dp"
-            android:layout_height="match_parent"/>
+    </LinearLayout>
 
-        <TextView
-            android:id="@+id/select_done"
-            android:gravity="left|center"
-            android:layout_gravity="right|bottom"
-            android:layout_width="match_parent"
-            android:layout_height="60sp"
-            android:layout_weight="1"
-            android:text = "  선택 완료"
-            android:textStyle = "bold"
-            android:textSize = "25dp"
-            android:textColor = "#333661"
-            android:fontFamily="@font/cafe24_air"
-            android:background="#D3CBF5"/>
-        </LinearLayout>
 
-    </RelativeLayout>
+
+</RelativeLayout>
 
