@@ -7,11 +7,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.bumptech.glide.Glide;
 import com.example.webtad.R;
 import com.example.webtad.addRecom.muFragAdd;
 import com.example.webtad.addRecom.muFragList;
@@ -101,6 +103,11 @@ public class FragFind extends Fragment implements View.OnClickListener {
             for(int i = 0; i < jsonArray.length(); i++){
                 JSONObject jsonObject1 = (JSONObject) jsonArray.get(i);
                 String thumbnail = jsonObject1.getString("thumbnail");
+
+                /*ImageView imageView = v.findViewById(R.id.imageView);
+
+                Glide.with(getActivity()).load(thumbnail).into(imageView);*/
+
                 String title = jsonObject1.getString("title");
                 String author = jsonObject1.getString("author");
                 String platform = jsonObject1.getString("platform");

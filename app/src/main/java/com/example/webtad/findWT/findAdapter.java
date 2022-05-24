@@ -1,5 +1,6 @@
 package com.example.webtad.findWT;
 
+import com.bumptech.glide.Glide;
 import com.example.webtad.R;
 
 import android.content.Context;
@@ -35,6 +36,10 @@ public class findAdapter extends RecyclerView.Adapter<findAdapter.ViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+        findData item = data.get(position);
+        Glide.with(holder.itemView.getContext())
+                .load(item.getThumbnail())
+                .into(holder.thumbnail);
         holder.thumbnail.setImageURI(Uri.parse(data.get(position).getThumbnail()));
         holder.title.setText(data.get(position).getTitle());
         holder.author.setText(data.get(position).getAuthor());
@@ -51,6 +56,9 @@ public class findAdapter extends RecyclerView.Adapter<findAdapter.ViewHolder> {
         public ViewHolder(View itemView) {
             super(itemView);
             thumbnail=itemView.findViewById(R.id.imageView);
+
+
+
             title=itemView.findViewById(R.id.title_rc);
             author=itemView.findViewById(R.id.author_rc);
 

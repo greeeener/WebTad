@@ -25,26 +25,25 @@
                 android:id="@+id/title_rc"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="7dp"
+                android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_toRightOf="@id/imageView"
+                android:fontFamily="@font/cafe24_air"
                 android:text="Title"
                 android:textColor="@color/black"
-                android:fontFamily="@font/cafe24_air"
-                android:textSize="20dp"/>
+                android:textSize="20dp" />
 
             <TextView
                 android:id="@+id/author_rc"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/title_rc"
-                android:layout_marginLeft="7dp"
-                android:layout_marginTop="7dp"
+                android:layout_marginLeft="13dp"
                 android:layout_marginBottom="-76dp"
+                android:layout_below="@id/title_rc"
                 android:layout_toRightOf="@id/imageView"
+                android:fontFamily="@font/cafe24_air"
                 android:text="Author"
                 android:textColor="#888888"
-                android:fontFamily="@font/cafe24_air"
                 android:textSize="15dp" />
 
             <ImageView

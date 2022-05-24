@@ -1,5 +1,7 @@
 package com.example.webtad.findWT;
 
+import com.bumptech.glide.Glide;
+
 public class findData {
     String thumbnail;
     String title;
@@ -14,7 +16,11 @@ public class findData {
     }
 
     public String getThumbnail() { return thumbnail; }
-    public void setThumbnail(String thumbnail) { this.thumbnail = thumbnail; }
+    public void setThumbnail(String thumbnail) {
+        this.thumbnail = thumbnail;
+
+
+    }
 
     public String getTitle() { return title; }
     public void setTitle(String title) { this.title = title; }
