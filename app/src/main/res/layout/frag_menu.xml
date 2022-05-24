@@ -44,7 +44,6 @@
             android:src="@drawable/ic_baseline_format_list_bulleted_24"
             android:scaleType="fitCenter"
             android:backgroundTint="#F1E9FF"
-            android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp" />
 
     </LinearLayout>
