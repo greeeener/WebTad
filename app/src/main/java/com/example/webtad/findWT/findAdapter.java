@@ -56,9 +56,6 @@ public class findAdapter extends RecyclerView.Adapter<findAdapter.ViewHolder> {
         public ViewHolder(View itemView) {
             super(itemView);
             thumbnail=itemView.findViewById(R.id.imageView);
-
-
-
             title=itemView.findViewById(R.id.title_rc);
             author=itemView.findViewById(R.id.author_rc);
 

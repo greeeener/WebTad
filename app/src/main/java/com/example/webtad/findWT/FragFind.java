@@ -47,15 +47,6 @@ public class FragFind extends Fragment implements View.OnClickListener {
         View v = inflater.inflate(R.layout.frag_find, container, false);
 
         recyclerView = v.findViewById(R.id.recy_find);
-        try {
-            parser();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        layoutManager = new LinearLayoutManager(getActivity());
-        recyclerView.setLayoutManager(layoutManager);
-        adapter = new findAdapter(data);
-        recyclerView.setAdapter(adapter);
 
         Button naver= v.findViewById(R.id.naver);
         naver.setOnClickListener(this);
@@ -66,6 +57,7 @@ public class FragFind extends Fragment implements View.OnClickListener {
         Button lezhin = v.findViewById(R.id.lezhin);
         lezhin.setOnClickListener(this);
 
+
         return v;
 
     }
@@ -74,20 +66,68 @@ public class FragFind extends Fragment implements View.OnClickListener {
     public void onClick(View v) {
         switch(v.getId())
         {
-            case R.id.naver:
+            case R.id.naver: {
+                //recyclerView.removeAllViewsInLayout();
+                data.clear();
+                try {
+                    parser("naver_keyword.json");
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                layoutManager = new LinearLayoutManager(getActivity());
+                recyclerView.setLayoutManager(layoutManager);
+                adapter = new findAdapter(data);
+                recyclerView.setAdapter(adapter);
                 break;
-            case R.id.kakao:
+            }
+            case R.id.kakao:{
+                //recyclerView.removeAllViewsInLayout();
+                data.clear();
+                try {
+                    parser("kakao_keyword.json");
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                layoutManager = new LinearLayoutManager(getActivity());
+                recyclerView.setLayoutManager(layoutManager);
+                adapter = new findAdapter(data);
+                recyclerView.setAdapter(adapter);
                 break;
-            case R.id.kkopage:
+            }
+            case R.id.kkopage:{
+                //recyclerView.removeAllViewsInLayout();
+                data.clear();
+                try {
+                    parser("kkopage_keyword.json");
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                layoutManager = new LinearLayoutManager(getActivity());
+                recyclerView.setLayoutManager(layoutManager);
+                adapter = new findAdapter(data);
+                recyclerView.setAdapter(adapter);
                 break;
-            case R.id.lezhin:
+            }
+            case R.id.lezhin:{
+                //recyclerView.removeAllViewsInLayout();
+                data.clear();
+                try {
+                    parser("lezhin_keyword.json");
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                layoutManager = new LinearLayoutManager(getActivity());
+                recyclerView.setLayoutManager(layoutManager);
+                adapter = new findAdapter(data);
+                recyclerView.setAdapter(adapter);
                 break;
+            }
 
         }
     }
 
-    private void parser() throws IOException {
-        InputStream is = getActivity().getAssets().open("all_keyword.json");
+    private void parser(String file) throws IOException {
+        InputStream is = getActivity().getAssets().open(file);
         InputStreamReader inputStreamReader = new InputStreamReader(is);
         BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
         StringBuffer stringBuffer = new StringBuffer();
@@ -103,11 +143,6 @@ public class FragFind extends Fragment implements View.OnClickListener {
             for(int i = 0; i < jsonArray.length(); i++){
                 JSONObject jsonObject1 = (JSONObject) jsonArray.get(i);
                 String thumbnail = jsonObject1.getString("thumbnail");
-
-                /*ImageView imageView = v.findViewById(R.id.imageView);
-
-                Glide.with(getActivity()).load(thumbnail).into(imageView);*/
-
                 String title = jsonObject1.getString("title");
                 String author = jsonObject1.getString("author");
                 String platform = jsonObject1.getString("platform");
